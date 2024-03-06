@@ -1,16 +1,49 @@
 import React from "react";
 import MyCalendar from "../Components/MyCalender/MyCalendar";
 import AnnouncementPage from "../Components/Announcements/AnnouncementPage";
+import { useState } from "react";
+import './landingcss.css'
 
 export default function LandingPage() {
+  const [displayText, setDisplayText] = useState("");
+  let [isVis,setIsVis]=useState(true);
+  const Click = () => {
+     setIsVis(!isVis)
+    };
+    const component1 = document.querySelector("#ann");
+    const component2 = document.querySelector("#cal");
+
+  if(isVis){
+    component1.style.width = "0vw";
+    component2.style.width = "100vw";
+  }
+  else{
+    component2.style.width = "40vw";
+    component1.style.width = "60vw";
+  }
   return (
-    <div className="flex flex-row pt-[70px]">
-      <div style={{ width: "60vw" }}>
-        <AnnouncementPage />
+//     <div className="flex flex-row pt-[70px]">
+//       {isVis?<>
+//       <div style={{ width: "60vw" }}>
+//         <AnnouncementPage/>
+//       </div>
+//       <div onClick={Click} style={{ width: "40vw" }}>
+//         <MyCalendar/>
+//       </div></>:<>
+//       <div class="slide-left" style={{ width: "100vw" }}>
+//         <MyCalendar/>
+//       </div>
+//       <button onClick={Click}> next </button>
+//       </>}
+//     </div>
+<div className="flex flex-row pt-[70px]">
+      <div id="ann" className="component"style={{ width: "60vw" }}>
+        <AnnouncementPage/>
       </div>
-      <div style={{ width: "40vw" }}>
-        <MyCalendar />
+            <div id="cal" className="component" onClick={Click} style={{ width: "40vw" }}>
+        <MyCalendar/>
       </div>
-    </div>
+      </div>
+
   );
 }

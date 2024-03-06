@@ -11,10 +11,12 @@ import LandingPage from './Pages/LandingPage.jsx'
 import LoginSignUpPage from './Pages/LoginSignupPage.jsx'
 import InternshipCard from './Components/Internships/IntershipCard.jsx'
 import Form from './Components/Companies/Form/Form.jsx'
-import StudentInt from './Components/IntQ/StudentInt.jsx'
+import StudentInterview from './Components/InterviewQuestions/StudentInterview.jsx'
 import QueryForum from './Components/QueryForum/QueryForum.jsx'
 import EventItem from './Components/TPOcomponents/EventItem.jsx'
 import Events from './Components/TPOcomponents/Events.jsx'
+import Resources from './Components/Resources/Resources.jsx'
+import TPOInterview from './Components/InterviewQuestions/TPOInterview.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
     },
     {
       path:"/testingGHK",
-      element: <StudentInt/>,
+      element: <Resources/>,
       errorElement:<ErrorPage/>
     }
   ]

@@ -61,4 +61,24 @@ body {
   .questions ul.responses strong {
     color: black;
   }
-  
+
+  .App{
+  margin:0;
+  padding: 0;
+  }
+
+  .form{
+    padding: 20px;
+
+    button{
+        background-color: black;
+        color: white;
+        width:100px;
+        border-radius: 5px;
+    }
+  }
+
+  .questions{
+    left:0!important;
+
+  }

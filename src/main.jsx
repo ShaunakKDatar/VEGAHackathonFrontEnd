@@ -18,6 +18,8 @@ import Events from './Components/TPOcomponents/Events.jsx'
 import Resources from './Components/Resources/Resources.jsx'
 import TPOInterview from './Components/InterviewQuestions/TPOInterview.jsx'
 import InternshipTPO from './Components/TPOcomponents/InternshipTPO.jsx'
+
+import Component from './Components/Profile/Profile.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,7 +47,7 @@ const router = createBrowserRouter([
     },
     {
       path:"/testingGHK",
-      element: <Resources/>,
+      element: <Component/>,
       errorElement:<ErrorPage/>
     }
   ]

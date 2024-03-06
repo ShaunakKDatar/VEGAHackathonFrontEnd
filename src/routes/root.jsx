@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
-import QueryForum from "../Components/QueryForum";
+// import QueryForum from "../Components/QueryForum";
 import MyCalendar from "../Components/MyCalender/MyCalendar";
 
 import AnnouncementPage from "../Components/Announcements/AnnouncementPage";
@@ -11,10 +11,10 @@ export default function Root() {
       
         {/* <Navbar/>
         <Outlet/> */}
-        <QueryForum/>
+        {/* <QueryForum/> */}
   
         <Navbar/>
-        <Outlet/>
+        {/* <Outlet/> */}
       <div className="flex flex-row pt-[70px]">
         <div style={{width : '60vw'}}>
         <AnnouncementPage/>

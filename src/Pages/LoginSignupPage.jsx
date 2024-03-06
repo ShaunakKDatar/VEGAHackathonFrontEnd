@@ -1,5 +1,4 @@
 import React from 'react'
-import MyCalendar from '../Components/Calender-Zoher/Calender-Zoher'
 import Login from '../Components/Login'
 import RegisterStudent from '../Components/RegisterStudent'
 import RegisterTPO from '../Components/RegisterTPO'

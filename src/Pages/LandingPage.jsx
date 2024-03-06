@@ -50,12 +50,18 @@
 // }
 
 import React, { useState } from "react";
+import { useContext } from "react";
+import  { UserDataContext } from "../Context/UserData";
 import MyCalendar from "../Components/MyCalender/MyCalendar";
 import AnnouncementPage from "../Components/Announcements/AnnouncementPage";
 import './landingcss.css'
 
 export default function LandingPage() {
+  
+  const data = useContext(UserDataContext);
   const [isVis, setIsVis] = useState(true);
+
+  console.log(data);
 
   const toggleVisibility = () => {
     setIsVis(!isVis);

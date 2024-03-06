@@ -1,7 +1,7 @@
 import React from 'react';
 import './intq.css';
 
-function StudentInt() {
+function TPOInterview() {
   const questions = [
     {
       id: 1,
@@ -37,6 +37,11 @@ function StudentInt() {
       
       <section className="questions" >
         <h2 className=" bg-secondary">Questions</h2>
+        <div className="form">
+            <input type="text" placeholder='Enter Question'/>
+            <input type="text" placeholder='Enter Answer'/>
+            <button>Submit</button>
+        </div>
         <ul className="flex flex-col border-10">
           {questions.map((question) => (
             <li key={question.id}>
@@ -57,4 +62,4 @@ function StudentInt() {
   );
 }
 
-export default StudentInt;
+export default TPOInterview;

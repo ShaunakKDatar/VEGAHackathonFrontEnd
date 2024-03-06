@@ -9,6 +9,7 @@ import Root from './routes/root.jsx'
 import ErrorPage from './error-page.jsx'
 import LandingPage from './Pages/LandingPage.jsx'
 import LoginSignUpPage from './Pages/LoginSignupPage.jsx'
+import InternshipCard from './Components/Internships/IntershipCard.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
     },
     {
       path:"/testing",
-      element:<div>Testing</div>,
+      element: <InternshipCard/>,
       errorElement:<ErrorPage/>
     }
   ]

@@ -10,8 +10,8 @@ function InternshipCard() {
             </div>
             <h2 className="text-lg font-semibold mb-2">Software Development Engineering (Web)</h2>
             <p className="text-sm text-gray-500 mb-4">Internshala</p>
-            <div className="grid grid-cols-3 gap-4 text-sm mb-4">
-                <div>
+            <div className="grid grid-cols-2 gap-4 text-sm mb-4">
+                <div className='flex flex-row justify-center py-1 '>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
                         <line x1="2" x2="5" y1="12" y2="12" />
                         <line x1="19" x2="22" y1="12" y2="12" />
@@ -21,7 +21,7 @@ function InternshipCard() {
                     </svg>
                     <span className="ml-1">Gurgaon</span>
                 </div>
-                <div>
+                <div className='flex flex-row justify-center py-1'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
                         <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
                         <line x1="16" x2="16" y1="2" y2="6" />
@@ -30,14 +30,14 @@ function InternshipCard() {
                     </svg>
                     <span className="ml-1">START DATE Immediately</span>
                 </div>
-                <div>
+                <div className='flex flex-row justify-center py-1'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
                         <circle cx="12" cy="12" r="10" />
                         <polyline points="12 6 12 12 16 14" />
                     </svg>
                     <span className="ml-1">DURATION 6 Months</span>
                 </div>
-                <div>
+                <div className=' flex flex-row justify-center py-1'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
                         <path d="M6 3h12" />
                         <path d="M6 8h12" />
@@ -52,9 +52,9 @@ function InternshipCard() {
                 <div className="inline-flex items-center rounded-full whitespace-nowrap border px-2.5 py-0.5 w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80">Few hours ago</div>
                 <span className="text-xs text-gray-500">Internship with job offer</span>
             </div>
-            <div className="flex justify-between">
-                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 flex-grow">View details</button>
-                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 flex-grow">Apply now</button>
+            <div className="flex justify-around">
+                <button className="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-10 py-2 ">View details</button>
+                <button className="inline-flex items-center justify-center  rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-10 py-2 ">Apply now</button>
             </div>
         </div>
     );

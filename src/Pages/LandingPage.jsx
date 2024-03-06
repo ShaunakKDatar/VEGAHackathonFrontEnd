@@ -1,12 +1,16 @@
-import React from 'react'
-import MyCalendar from '../Components/MyCalender/MyCalendar'
-
+import React from "react";
+import MyCalendar from "../Components/MyCalender/MyCalendar";
+import AnnouncementPage from "../Components/Announcements/AnnouncementPage";
 
 export default function LandingPage() {
-
   return (
-    <div className='pt-[70px]'>
-      <MyCalendar/>
-    </div>
-  )
+    <div className="flex flex-row pt-[70px]">
+      <div style={{ width: "60vw" }}>
+        <AnnouncementPage />
+      </div>
+      <div style={{ width: "40vw" }}>
+        <MyCalendar />
+      </div>
+    </div>
+  );
 }

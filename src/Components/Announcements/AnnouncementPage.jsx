@@ -40,11 +40,11 @@ export default function AnnouncementPage() {
             </h1>
 
 
-            {articles.map((element) => {
+            {articles.map((element, ind) => {
 
 
 
-                return <div className="col px-10 border rounded mx-3 my-3">
+                return <div key={ind} className="col px-10 border rounded mx-3 my-3">
                     <Announcements
                         title={element.title}
                         description={element.description}

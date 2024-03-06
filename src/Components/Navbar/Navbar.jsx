@@ -7,7 +7,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="navbar bg-tertiary flex items-center justify-around">
+    <div className="navbar bg-tertiary flex items-center justify-around fixed w-full z-30">
 
         <div className="companyname flex flex-col items-center justify-center">
           <a href="/">
@@ -15,7 +15,7 @@ const Navbar = () => {
           </a>
           <p>COMPANY</p>
         </div>
-        <ul className="flex gap-[10px]">
+        <ul className="flex gap-[20px]">
           <li href="#">
             <a href="/home">Home</a>
           </li>
@@ -30,9 +30,9 @@ const Navbar = () => {
           </li>
         </ul>
 
-      <div className="profile dropdown flex" onClick={toggleMenu}>
+      <div className="profile dropdown flex items-center justify-around gap-[5px]"  onClick={toggleMenu}>
         <img className="img1 rounded-full" width={'50px'} src={"photo_default.jpg"} alt="" />
-        <p className="" onClick={toggleMenu}>
+        <p className="cursor-pointer" onClick={toggleMenu}>
           User ⤦
         </p>
         {isOpen && (
@@ -47,7 +47,7 @@ const Navbar = () => {
               <a href="">Settings</a>
               <a href="">Notification</a>
               <div className="line"></div>
-              <Link to="/login">login</Link>
+              <Link to="/login" className="cursor-pointer" >login</Link>
             </div>
           </div>
         )}

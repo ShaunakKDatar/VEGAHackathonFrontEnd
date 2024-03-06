@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function RegisterStudent() {
   let [isTPO, setIsTPO] = useState(false);
@@ -8,6 +9,46 @@ export default function RegisterStudent() {
     setIsTPO(!setIsTPO);
   }
 
+
+
+
+  const handleRegister = async () => {
+    try {
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const college = document.getElementById("college").value;
+      const password = document.getElementById("password").value;
+      const isStudent = !isTPO;
+
+      const userData = {
+        username,
+        email,
+        college,
+        password,
+        isStudent
+      };
+
+      const response = await axios.post("http://localhost:3000/api/student", userData);
+      const responseData = response.data;
+      const token = response.data.token;
+
+      // Do something with the response data and headers
+      console.log(responseData);
+      if (responseData.success) {
+        // Handle successful login/signup, e.g., redirect to dashboard
+        localStorage.setItem('X-auth-token', token);
+        // localStorage.setItem("test", 'soham')
+        window.location.replace("/")
+        console.log(isLogin ? 'Login successful' : 'Signup successful');
+      } else {
+        // Handle login/signup failure, show error message to the user
+        alert(data.error)
+        console.error('Authentication failed:', data.error);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
 
   return (
@@ -58,6 +99,7 @@ export default function RegisterStudent() {
             </select>
           </div>
           <button
+            onClick={()=>{handleRegister()}}
             stlye={{ marginBottom: "10px" }}
             className=" bg-secondary inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-seconbdary text-primary-foreground hover:bg-seconbdary/90 h-10 px-4 py-2 w-full "
           >

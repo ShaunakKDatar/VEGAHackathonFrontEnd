@@ -1,5 +1,5 @@
 import React from 'react'
-import MyCalendar from '../Components/Calender-Zoher/Calender-Zoher'
+import MyCalendar from '../Components/MyCalender/MyCalendar'
 
 
 export default function LandingPage() {

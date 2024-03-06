@@ -1,10 +1,11 @@
 import React from 'react'
-import { Calendar } from 'react-big-calendar'
+import MyCalendar from '../Components/Calender-Zoher/Calender-Zoher'
+
 
 export default function LandingPage() {
   return (
-    <div>
-      <Calendar/>
+    <div className='pt-[70px]'>
+      <MyCalendar/>
     </div>
   )
 }

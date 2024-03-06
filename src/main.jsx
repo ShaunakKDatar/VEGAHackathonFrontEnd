@@ -9,7 +9,7 @@ import Root from './routes/root.jsx'
 import ErrorPage from './error-page.jsx'
 import LandingPage from './Pages/LandingPage.jsx'
 import LoginSignUpPage from './Pages/LoginSignupPage.jsx'
-import InternshipCard from './Components/Internships/IntershipCard.jsx'
+
 import Form from './Components/Companies/Form/Form.jsx'
 import StudentInterview from './Components/InterviewQuestions/StudentInterview.jsx'
 import QueryForum from './Components/QueryForum/QueryForum.jsx'
@@ -18,6 +18,7 @@ import Events from './Components/TPOcomponents/Events.jsx'
 import Resources from './Components/Resources/Resources.jsx'
 import TPOInterview from './Components/InterviewQuestions/TPOInterview.jsx'
 import InternshipTPO from './Components/TPOcomponents/InternshipTPO.jsx'
+import InternshipBoard from './Components/Internships/InternshipBoard.jsx'
 
 import Component from './Components/Profile/Profile.jsx'
 const router = createBrowserRouter([
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
     },
     {
       path:"/testing",
-      element: <InternshipCard/>,
+      element: <InternshipBoard/>,
       errorElement:<ErrorPage/>
     },
     {

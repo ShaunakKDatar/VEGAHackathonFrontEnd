@@ -8,6 +8,8 @@ import Login from './Components/Login'
 import RegisterStudent from './Components/RegisterStudent'
 import RegisterTPO from './Components/RegisterTPO'
 import RegisterCompany from './Components/RegisterCompany'
+import Coursecard from './Components/Coursecard/Coursecard'
+import Companies from './Components/Companies/Companies'
 
 function App() {
  
@@ -15,11 +17,8 @@ function App() {
   return (
     <>
 
-<Login/>
-<RegisterStudent/>
-<RegisterTPO/>
-<RegisterCompany/>
-<Calendar/>
+{/* <Companies/> */}
+<Navbar/>
 
 
     </>

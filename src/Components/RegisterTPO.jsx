@@ -49,10 +49,11 @@ export default function RegisterTPO() {
     <p className='text-xs'> This is for Student Registration</p>
 
     <div className="mt-1 text-center text-sm pb-3">
+      <small>
       Already have an account?
-      <a className="underline" href="#">
+      <Link className="underline" to="/Login">
         Login
-      </a>
+      </Link></small>
     </div>
     </div>
    

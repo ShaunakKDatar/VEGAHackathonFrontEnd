@@ -8,6 +8,7 @@ import './index.css'
 import Root from './routes/root.jsx'
 import ErrorPage from './error-page.jsx'
 import LandingPage from './Pages/LandingPage.jsx'
+import LoginSignUpPage from './Pages/LoginSignupPage.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,8 +16,20 @@ const router = createBrowserRouter([
     errorElement:<ErrorPage/>,
     children:[{
       path: "",
-      element: <LandingPage/>
-    }]
+      element: <LandingPage/>,
+      errorElement:<ErrorPage/>
+    },
+    {
+      path:"/login",
+      element:<LoginSignUpPage page="login"/>,
+      errorElement:<ErrorPage/>
+    },
+    {
+      path:"/signup",
+      element:<LoginSignUpPage page=""/>,
+      errorElement:<ErrorPage/>
+    }
+  ]
   },
 ]);
 

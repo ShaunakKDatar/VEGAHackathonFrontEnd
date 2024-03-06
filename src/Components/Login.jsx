@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   return (
@@ -54,10 +55,11 @@ export default function Login() {
     
     </div>
     <div className="mt-4 text-center text-sm">
+      <small>
       Don't have an account?
-      <a className="underline" href="#">
+      <Link className="underline" to="/signup">
         Sign up
-      </a>
+      </Link></small>
     </div>
   </div>
 </div>

@@ -17,19 +17,6 @@ function App() {
     <>
 
 
-{/* <Companies/> */}
-<Navbar/>
-
-
-
-{/* <Navbar />
-<Login/>
-<RegisterStudent/>
-<RegisterTPO/>
-<RegisterCompany/>
-<MyCalendar/> */}
-<Profile/>
-
     </>
   )
 }

@@ -10,12 +10,8 @@ import ErrorPage from './error-page.jsx'
 import LandingPage from './Pages/LandingPage.jsx'
 import LoginSignUpPage from './Pages/LoginSignupPage.jsx'
 import InternshipCard from './Components/Internships/IntershipCard.jsx'
-import Form from './Components/Companies/Form/Form.jsx'
-import StudentInt from './Components/IntQ/StudentInt.jsx'
-import QueryForum from './Components/QueryForum/QueryForum.jsx'
-import EventItem from './Components/TPOcomponents/EventItem.jsx'
-import Events from './Components/TPOcomponents/Events.jsx'
-import InternshipTPO from './Components/TPOcomponents/InternshipTPO.jsx'
+// import StudentInterview from './Components/InterviewOuestions/StudentInterview.jsx'
+import { UserDataProvider } from './Context/UserData.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,11 +42,11 @@ const router = createBrowserRouter([
         element: <InternshipCard />,
         errorElement: <ErrorPage />,
       },
-      {
-        path: "/testingGHK",
-        element: <StudentInt />,
-        errorElement: <ErrorPage />,
-      },
+      // {
+      //   path: "/testingGHK",
+      //   element: <StudentInterview/>,
+      //   errorElement: <ErrorPage />,
+      // },
     ],
   },
 ]);

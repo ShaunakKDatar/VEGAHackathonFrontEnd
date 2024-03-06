@@ -51,7 +51,7 @@ const Navbar = () => {
               <a href="">Settings</a>
               <a href="">Notification</a>
               <div className="line"></div>
-              <Link to="/login" className="cursor-pointer" >login</Link>
+              <Link to="/login" className="cursor-pointer" >{(localStorage.getItem("X-auth-token"))?"Logout":"Login"}</Link>
             </div>
           </div>
         )}

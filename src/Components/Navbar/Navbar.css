@@ -1,0 +1,27 @@
+ul{
+    display: flex;
+    list-style: none;
+    gap:24px;
+    cursor:pointer;
+    align-items: center;
+  }
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    max-width:1280px;
+    margin: 0 auto;
+    height:72px;
+    align-items: center;
+    border-bottom: 2px solid grey;
+
+  }
+
+  .left{
+    display: flex;
+  }
+.company{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}

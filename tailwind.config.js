@@ -9,7 +9,7 @@ export default {
       colors: {
         primary: {
           // DEFAULT: '#ff003ba6', // Replace with your primary color
-          DEFAULT: '#16C4E0', // Replace with your primary color
+          DEFAULT: '#EDF4ED', // Replace with your primary color
         },
         secondary: {
           DEFAULT: '#79B791', // Replace with your secondary color

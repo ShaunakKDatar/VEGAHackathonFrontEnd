@@ -15,6 +15,7 @@ import StudentInt from './Components/IntQ/StudentInt.jsx'
 import QueryForum from './Components/QueryForum/QueryForum.jsx'
 import EventItem from './Components/TPOcomponents/EventItem.jsx'
 import Events from './Components/TPOcomponents/Events.jsx'
+import InternshipTPO from './Components/TPOcomponents/InternshipTPO.jsx'
 const router = createBrowserRouter([
   {
     path: "/",

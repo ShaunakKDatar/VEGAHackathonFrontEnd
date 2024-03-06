@@ -24,7 +24,7 @@ export default function Events() {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-4">
+    <div className="flex flex-col gap-4 p-4 pt-[100px]">
       <div className="flex items-center gap-4">
         <h1 className="text-2xl font-semibold">Events</h1>
         <button

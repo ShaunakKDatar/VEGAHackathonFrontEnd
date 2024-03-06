@@ -12,6 +12,7 @@ import LoginSignUpPage from './Pages/LoginSignupPage.jsx'
 import InternshipCard from './Components/Internships/IntershipCard.jsx'
 import EventItem from './Components/TPOcomponents/EventItem.jsx'
 import Events from './Components/TPOcomponents/Events.jsx'
+import InternshipTPO from './Components/TPOcomponents/InternshipTPO.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
     },
     {
       path:"/testing",
-      element: <Events/>,
+      element: <InternshipTPO/>,
       errorElement:<ErrorPage/>
     }
   ]

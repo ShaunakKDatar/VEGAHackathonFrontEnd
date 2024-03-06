@@ -13,14 +13,14 @@ export default function LandingPage() {
     const component1 = document.querySelector("#ann");
     const component2 = document.querySelector("#cal");
 
-  if(isVis){
-    component1.style.width = "0vw";
-    component2.style.width = "100vw";
-  }
-  else{
-    component2.style.width = "40vw";
-    component1.style.width = "60vw";
-  }
+  // if(isVis){
+  //   component1.style.width = "0vw";
+  //   component2.style.width = "100vw";
+  // }
+  // else{
+  //   component2.style.width = "40vw";
+  //   component1.style.width = "60vw";
+  // }
   return (
 //     <div className="flex flex-row pt-[70px]">
 //       {isVis?<>

@@ -12,11 +12,11 @@ export default {
           DEFAULT: '#16C4E0', // Replace with your primary color
         },
         secondary: {
-          DEFAULT: '#E6FDFF', // Replace with your secondary color
+          DEFAULT: '#79B791', // Replace with your secondary color
           // DEFAULT: '#C5E0D8', // Replace with your secondary color
         },
         tertiary: {
-          DEFAULT: '#5CDB95', // Replace with your tertiary color
+          DEFAULT: '#ABD1B5', // Replace with your tertiary color
         },
       },
     },

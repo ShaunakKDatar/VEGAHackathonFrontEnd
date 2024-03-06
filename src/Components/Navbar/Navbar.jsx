@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import  { UserDataContext } from "../../Context/UserData";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const data = useContext(UserDataContext);
+  console.log(data);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -33,14 +37,14 @@ const Navbar = () => {
       <div className="profile dropdown flex items-center justify-around gap-[5px]"  onClick={toggleMenu}>
         <img className="img1 rounded-full" width={'50px'} src={"photo_default.jpg"} alt="" />
         <p className="cursor-pointer" onClick={toggleMenu}>
-          User ⤦
+          {(localStorage.getItem("X-auth-token"))?data.userData.username:"User"} ⤦
         </p>
         {isOpen && (
           <div className="menu absolute top-[70px] bg-tertiary">
             <div className="dropcontainer">
               <div className="profile">
                 {/* <img src={"photo_default.jpg"} alt="" width="40px" /> */}
-                <p className="name">Ghruank</p>
+                <p className="name">blabla</p>
               </div>
               <a href="">My profile</a>
               <div className="line"></div>

@@ -11,51 +11,52 @@ import LandingPage from './Pages/LandingPage.jsx'
 import LoginSignUpPage from './Pages/LoginSignupPage.jsx'
 import InternshipCard from './Components/Internships/IntershipCard.jsx'
 import Form from './Components/Companies/Form/Form.jsx'
-import StudentInterview from './Components/InterviewQuestions/StudentInterview.jsx'
+import StudentInt from './Components/IntQ/StudentInt.jsx'
 import QueryForum from './Components/QueryForum/QueryForum.jsx'
 import EventItem from './Components/TPOcomponents/EventItem.jsx'
 import Events from './Components/TPOcomponents/Events.jsx'
-import Resources from './Components/Resources/Resources.jsx'
-import TPOInterview from './Components/InterviewQuestions/TPOInterview.jsx'
 import InternshipTPO from './Components/TPOcomponents/InternshipTPO.jsx'
-
-import Component from './Components/Profile/Profile.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
-    errorElement:<ErrorPage/>,
-    children:[{
-      path: "",
-      element: <LandingPage/>,
-      errorElement:<ErrorPage/>
-    },
-    {
-      path:"/login",
-      element:<LoginSignUpPage page="login"/>,
-      errorElement:<ErrorPage/>
-    },
-    {
-      path:"/signup",
-      element:<LoginSignUpPage page=""/>,
-      errorElement:<ErrorPage/>
-    },
-    {
-      path:"/testing",
-      element: <InternshipCard/>,
-      errorElement:<ErrorPage/>
-    },
-    {
-      path:"/testingGHK",
-      element: <Component/>,
-      errorElement:<ErrorPage/>
-    }
-  ]
+    element: (
+      <UserDataProvider>
+        <Root />
+      </UserDataProvider>
+    ),
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "",
+        element: <LandingPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/login",
+        element: <LoginSignUpPage page="login" />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/signup",
+        element: <LoginSignUpPage page="" />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/testing",
+        element: <InternshipCard />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/testingGHK",
+        element: <StudentInt />,
+        errorElement: <ErrorPage />,
+      },
+    ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

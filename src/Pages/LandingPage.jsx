@@ -61,7 +61,7 @@ export default function LandingPage() {
   const data = useContext(UserDataContext);
   const [isVis, setIsVis] = useState(true);
 
-  console.log(data);
+  
 
   const toggleVisibility = () => {
     setIsVis(!isVis);

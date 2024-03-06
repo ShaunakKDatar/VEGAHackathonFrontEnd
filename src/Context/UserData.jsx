@@ -12,6 +12,8 @@ export const UserDataProvider = (props) => {
     // Define the useEffect hook to make the API request
     useEffect(() => {
         const fetchData = async () => {
+            if (!localStorage.getItem('X-auth-token')) return;
+                // console.log(localStorage.getItem('X-auth-token'));
             try {
                 // Make the API request
                 const response = await axios.get('http://localhost:3000/api/student/me', {
@@ -21,7 +23,6 @@ export const UserDataProvider = (props) => {
                 });
 
                 // Save the response in userData
-                // console.log(response.data);
                 setUserData(response.data);
             } catch (error) {
                 console.error(error);

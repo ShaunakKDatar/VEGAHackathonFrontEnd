@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import  { UserDataContext } from "../../Context/UserData";
+import { IoIosLogIn } from "react-icons/io";
+import { IoIosSettings } from "react-icons/io";
+import { IoIosNotifications } from "react-icons/io";
 import './Navbar.css'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,10 +51,19 @@ const Navbar = () => {
               </div>
               <a href="">My profile</a>
               <div className="line"></div>
-              <a href="">Settings</a>
-              <a href="">Notification</a>
+              <div className="flex justify-center items-center">
+              <a href="">Settings  </a><IoIosSettings />
+              </div>
+              <div className="flex justify-center items-center">
+              <a href="">Notification  </a><IoIosNotifications />
+              </div>
+
               <div className="line"></div>
-              <Link to="/login" className="cursor-pointer" >login</Link>
+              <div className="flex justify-center items-center">
+              <Link to="/login" className="cursor-pointer" >login  </Link>
+              <br/>
+              <IoIosLogIn />
+              </div>
             </div>
           </div>
         )}

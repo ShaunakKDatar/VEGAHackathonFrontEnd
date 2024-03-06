@@ -20,6 +20,10 @@ import TPOInterview from './Components/InterviewQuestions/TPOInterview.jsx'
 import InternshipTPO from './Components/TPOcomponents/InternshipTPO.jsx'
 
 import Component from './Components/Profile/Profile.jsx'
+import Companies from './Components/Companies/Companies.jsx'
+import Login from './Components/Login.jsx'
+import RegisterTPO from './Components/RegisterTPO.jsx'
+import RegisterStudent from './Components/RegisterStudent.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,7 +51,7 @@ const router = createBrowserRouter([
     },
     {
       path:"/testingGHK",
-      element: <Component/>,
+      element: <RegisterStudent/>,
       errorElement:<ErrorPage/>
     }
   ]

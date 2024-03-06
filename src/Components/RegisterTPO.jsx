@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function RegisterTPO() {
   return (
-    <div className='mt-10'>
+    <div className='mt-[150px]'>
    
     <div class="rounded-lg border bg-card text-card-foreground shadow-sm mx-auto max-w-md px-10">
       <div class="space-y-2 text-center">

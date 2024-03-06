@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <div>
       
-<div className="rounded-lg border bg-card text-card-foreground shadow-sm mx-auto max-w-md" data-v0-t="card">
+<div className="rounded-lg border bg-card text-card-foreground shadow-sm mx-auto max-w-md mt-[150px]" data-v0-t="card">
   <div className="flex flex-col p-6 space-y-1">
     <h3 className="whitespace-nowrap tracking-tight text-2xl font-bold">Login</h3>
     <p className="text-sm text-muted-foreground">Enter your email below to login to your account</p>

@@ -52,7 +52,7 @@ export default function RegisterStudent() {
 
 
   return (
-    <div className="mt-10">
+    <div className="mt-[150px]">
       <div className="rounded-lg border bg-card text-card-foreground shadow-sm mx-auto max-w-md px-10">
         <div className="space-y-2 text-center">
           <h1 className="text-4xl font-bold mt-3">Create an account</h1>

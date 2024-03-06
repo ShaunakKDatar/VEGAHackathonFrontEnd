@@ -59,11 +59,7 @@ const Navbar = () => {
               </div>
 
               <div className="line"></div>
-              <div className="flex justify-center items-center">
-              <Link to="/login" className="cursor-pointer" >login  </Link>
-              <br/>
-              <IoIosLogIn />
-              </div>
+              <Link to="/login" className="cursor-pointer" >{(localStorage.getItem("X-auth-token"))?"Logout":"Login"}</Link>
             </div>
           </div>
         )}

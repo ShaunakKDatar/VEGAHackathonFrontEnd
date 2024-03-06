@@ -8,13 +8,19 @@ export const UserDataContext = createContext();
 export const UserDataProvider = (props) => {
     // Define the state variables
     const [userData, setUserData] = useState({});
+    const [announcements, setAnnouncements] = useState({});
 
     // Define the useEffect hook to make the API request
     useEffect(() => {
         const fetchData = async () => {
+            const announcementsres = await axios.get('http://localhost:3000/api/announcements');
+                setAnnouncements(announcementsres);
+
             if (!localStorage.getItem('X-auth-token')) return;
                 // console.log(localStorage.getItem('X-auth-token'));
             try {
+
+                
                 // Make the API request
                 const response = await axios.get('http://localhost:3000/api/student/me', {
                     headers: {
@@ -37,7 +43,7 @@ export const UserDataProvider = (props) => {
 
     // Return the provider component with the context value
     return (
-        <UserDataContext.Provider value={{ userData, setUserData }}>
+        <UserDataContext.Provider value={{ userData, announcements }}>
             {props.children}
         </UserDataContext.Provider>
     );

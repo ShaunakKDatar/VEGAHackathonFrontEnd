@@ -6,7 +6,7 @@ function InternshipCard(props) {
         <div className="max-w-md mx-auto bg-white rounded-lg  p-6">
             <div className="flex justify-between items-center mb-4">
                 <div className="inline-flex items-center rounded-full whitespace-nowrap border px-2.5 py-0.5 w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">Actively hiring</div>
-                <img src="/placeholder.svg" alt="Company Logo" className="h-5" width="100" height="20" style={{ aspectRatio: '100 / 20', objectFit: 'cover' }} />
+               
             </div>
             <h2 className="text-lg font-semibold mb-2">{props.jobTitle}</h2>
             <p className="text-sm text-gray-500 mb-4">{props.source}</p>

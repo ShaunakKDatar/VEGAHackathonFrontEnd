@@ -5,31 +5,31 @@ let articles = [
     {
         title: "Software Engineer Intern",
         duration: "Summer 2024",
-        source: "Company XYZ",
-        place: "San Francisco, CA",
+        source: "Google Inc.",
+        place: "Bengaluru, BLR",
         stipend: "$2000/month"
       },
       {
         title: "Data Analyst Intern",
         duration: "Fall 2024",
-        source: "Company ABC",
-        place: "New York, NY",
+        source: "JP Morgan Chase & Co.",
+        place: "Mumbai, MUM",
         stipend: "$1800/month"
       },
       {
         title: "Marketing Intern",
         duration: "Spring 2024",
-        source: "Company DEF",
-        place: "Los Angeles, CA",
+        source: "Morgan Stanley",
+        place: "Hyderabad, HYD",
         stipend: "$1500/month"
       }
 ]
 
   return (
-    <div className='flex flex-row'>
+    <div className='flex flex-row mt-[100px]'>
        {articles.map((element, ind) => {
 
-return <div key={ind} className=" px-10 rounded mx-3 my-3">
+return <div key={ind} className=" px-10 border rounded mx-3 my-3">
     <InternshipCard
     jobTitle={element.title}
      duration={element.duration}

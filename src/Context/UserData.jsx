@@ -14,8 +14,7 @@ export const UserDataProvider = (props) => {
     // Define the useEffect hook to make the API request
     useEffect(() => {
         const fetchData = async () => {
-            const eventsRes = await axios.get('http://localhost:3000/api/announcements');
-            console.log(eventsRes);
+            const eventsRes = await axios.get('http://localhost:3000/api/event');
             setEvents(eventsRes.data.data);
 
 

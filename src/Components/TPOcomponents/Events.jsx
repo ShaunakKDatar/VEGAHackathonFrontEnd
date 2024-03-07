@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import EventItem from './EventItem';
 import EventForm from './EventForm'; // Import the EventForm component
+import { useContext } from "react";
+import  { UserDataContext } from "../../Context/UserData";
 
 export default function Events() {
   const [showModal, setShowModal] = useState(false);
+  const data = useContext(UserDataContext);
+  const events = data.events;
+  console.log(events);
+
+  
 
   // Function to handle opening the modal
   const openModal = () => {
@@ -51,8 +58,8 @@ export default function Events() {
                 </tr>
               </thead>
               <tbody className="[&amp;_tr:last-child]:border-0">
-                <EventItem />
-                {/* Add other rows similarly */}
+                {events.map((event) => {return <EventItem title={event.title} description={event.description}  />}
+                // {/* Add other rows similarly */}
               </tbody>
             </table>
           </div>

@@ -34,6 +34,9 @@ const Navbar = () => {
           <li href="#">
             <Link to="/forum">Forum</Link> 
           </li>
+          <li href="#">
+            <Link to="/event">Event</Link> 
+          </li>
         </ul>
 
       <div className="profile dropdown"  onClick={toggleMenu}>
@@ -46,7 +49,7 @@ const Navbar = () => {
             <div className="dropcontainer">
               <div className="profile">
                 <img src={"photo_default.jpg"} alt="" width="40px" />
-                <p className="name">Ghruank</p>
+                <p className="name">{(localStorage.getItem("X-auth-token"))?data.userData.username:"User"}</p>
               </div>
               <Link to="/profile">My profile</Link> 
               <div className="line"></div>

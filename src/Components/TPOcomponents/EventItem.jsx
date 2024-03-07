@@ -1,15 +1,14 @@
 import React from 'react'
 
-export default function EventItem() {
+export default function EventItem(props) {
   return (
  
 
 <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-                  <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-semibold">1</td>
-                  <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-semibold">Internship Fair</td>
-                  <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">Meet top recruiters and find your dream internship</td>
-                  <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">2023-10-15</td>
-                  <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">10:00 AM</td>
+                  <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-semibold">{props.ind}</td>
+                  <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-semibold">{props.title}</td>
+                  <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">{props.description}</td>
+                  <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">{props.startDate}-{props.endDate}</td>
                   <td className="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right w-[100px]">
                     <div>
                      

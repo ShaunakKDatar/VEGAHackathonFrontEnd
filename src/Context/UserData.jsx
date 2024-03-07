@@ -8,13 +8,14 @@ export const UserDataContext = createContext();
 export const UserDataProvider = (props) => {
     // Define the state variables
     const [userData, setUserData] = useState({});
-    const [announcements, setAnnouncements] = useState({});
+    let [announcements, setAnnouncements] = useState([]);
 
     // Define the useEffect hook to make the API request
     useEffect(() => {
         const fetchData = async () => {
             const announcementsres = await axios.get('http://localhost:3000/api/announcements');
-                setAnnouncements(announcementsres);
+            console.log(announcementsres);
+                setAnnouncements(announcementsres.data.data);
 
             if (!localStorage.getItem('X-auth-token')) return;
                 // console.log(localStorage.getItem('X-auth-token'));

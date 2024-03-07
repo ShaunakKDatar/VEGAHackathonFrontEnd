@@ -18,23 +18,21 @@ const Navbar = () => {
     <div className="navbar bg-tertiary ">
 
         <div className="companyname">
-          <a href="/">
+          <Link to="/">
             <img src={"discord.png"} alt="" width={'50px'} />
-          </a>
+          </Link> 
           <p>COMPANY</p>
         </div>
         <ul className="flex gap-[20px]">
           <li href="#">
-            <a href="/home">Home</a>
+            <Link to="/">Home</Link> 
           </li>
           <li href="#">
-            <a href="/calender">Calender</a>
+            <Link to="/internship">Internships</Link> 
           </li>
+        
           <li href="#">
-            <a href="/placement">Placement</a>
-          </li>
-          <li href="#">
-            <a href="/forum">Forum</a>
+            <Link to="/forum">Forum</Link> 
           </li>
         </ul>
 
@@ -50,13 +48,13 @@ const Navbar = () => {
                 <img src={"photo_default.jpg"} alt="" width="40px" />
                 <p className="name">Ghruank</p>
               </div>
-              <a href="">My profile</a>
+              <Link to="">My profile</Link> 
               <div className="line"></div>
               <div className="flex justify-center items-center">
-              <a href="">Settings  </a><IoIosSettings />
+              <Link to="">Settings  </Link> <IoIosSettings />
               </div>
               <div className="flex justify-center items-center">
-              <a href="">Notification  </a><IoIosNotifications />
+              <Link to="">Notification  </Link> <IoIosNotifications />
               </div>
 
               <div className="line"></div>

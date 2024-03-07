@@ -48,7 +48,7 @@ const Navbar = () => {
                 <img src={"photo_default.jpg"} alt="" width="40px" />
                 <p className="name">Ghruank</p>
               </div>
-              <Link to="">My profile</Link> 
+              <Link to="/profile">My profile</Link> 
               <div className="line"></div>
               <div className="flex justify-center items-center">
               <Link to="">Settings  </Link> <IoIosSettings />

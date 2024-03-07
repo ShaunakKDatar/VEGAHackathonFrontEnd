@@ -13,6 +13,7 @@ import { UserDataProvider } from './Context/UserData.jsx'
 import Events from './Components/TPOcomponents/Events.jsx'
 import InternshipBoard from './Components/Internships/InternshipBoard.jsx'
 import QueryForum from './Components/QueryForum/QueryForum.jsx'
+import Profile from './Components/Profile/Profile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,12 @@ const router = createBrowserRouter([
         element: <UserDataProvider><QueryForum/> </UserDataProvider>,
         errorElement: <ErrorPage />,
       },
+    
+    {
+      path: "/profile",
+      element: <UserDataProvider><Profile/></UserDataProvider>,
+      errorElement: <ErrorPage />,
+    },
       
     ],
   },

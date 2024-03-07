@@ -6,13 +6,51 @@ export default function RegisterStudent() {
   let [isTPO, setIsTPO] = useState(false);
   const roleHandler = ()=>{
     console.log(isTPO);
-    setIsTPO(!setIsTPO);
+    setIsTPO(!isTPO);
   }
 
 
 
 
   const handleRegister = async () => {
+    if (isTPO) {
+      console.log("TPO");
+      try {
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const college = document.getElementById("college").value;
+      const password = document.getElementById("password").value;
+
+      const userData = {
+        username,
+        email,
+        college,
+        password,
+        isTPO
+      };
+
+      const response = await axios.post("http://localhost:3000/api/tpo", userData);
+      const responseData = response.data;
+      const token = response.data.token;
+
+      // Do something with the response data and headers
+      console.log(responseData);
+      if (responseData.success) {
+        // Handle successful login/signup, e.g., redirect to dashboard
+        localStorage.setItem('X-auth-token', token);
+        // localStorage.setItem("test", 'soham')
+        window.location.replace("/")
+        console.log(isLogin ? 'Login successful' : 'Signup successful');
+      } else {
+        // Handle login/signup failure, show error message to the user
+        alert(data.error)
+        console.error('Authentication failed:', data.error);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+    } else {
+      console.log('student');
     try {
       const username = document.getElementById("username").value;
       const email = document.getElementById("email").value;
@@ -49,6 +87,7 @@ export default function RegisterStudent() {
       console.error(error);
     }
   };
+}
 
 
   return (

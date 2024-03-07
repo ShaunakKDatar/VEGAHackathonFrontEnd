@@ -6,6 +6,7 @@ import { UserDataContext } from "../../Context/UserData";
 export default function AnnouncementPage() {
     const data = useContext(UserDataContext);
     console.log(data);
+    const articles = data.announcements;
 
 
     // let articles = [

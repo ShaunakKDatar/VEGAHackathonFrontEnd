@@ -22,7 +22,7 @@ export default function LandingPage() {
       <div className="flex items-center ">
       <IoIosArrowForward onClick={toggleVisibility}  className={isVis?"hidden":"cursor-pointer"} size={50}   />
       <div id="cal" className="component" onClick={()=>{isVis&&toggleVisibility()}} style={{ width: isVis ? "40vw" : "95vw" }}>
-        <MyCalendar />
+        <MyCalendar isVis={isVis}/>
       </div>
       
       </div>

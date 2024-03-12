@@ -6,7 +6,7 @@ import { useContext } from "react";
 import  { UserDataContext } from "../../Context/UserData";
 
 const localizer = momentLocalizer(moment);
-const MyCalendar = () => {
+const MyCalendar = ({isVis}) => {
   const data = useContext(UserDataContext);
   const events = data.events;
   const myEventsList =[];
@@ -18,7 +18,7 @@ const MyCalendar = () => {
     });
   });
   return (
-  <div style={{ height: 500 }}>
+  <div style={{  height: isVis ? "60vh" : "78vh"}}>
     <Calendar
       localizer={localizer}
       events={myEventsList}

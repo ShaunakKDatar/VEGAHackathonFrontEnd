@@ -18,7 +18,7 @@ const MyCalendar = ({isVis}) => {
     });
   });
   return (
-  <div style={{  height: isVis ? "60vh" : "78vh"}}>
+  <div style={{  height: isVis ? "60vh" : "78vh", width: isVis ? "40vw" : "100vw" }} className='transition-height transition-width duration-500 ease-in-out overflow-hidden float-left cursor-pointer'>
     <Calendar
       localizer={localizer}
       events={myEventsList}

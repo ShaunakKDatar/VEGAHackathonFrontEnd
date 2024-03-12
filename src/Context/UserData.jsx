@@ -15,14 +15,14 @@ export const UserDataProvider = (props) => {
     // Define the useEffect hook to make the API request
     useEffect(() => {
         const fetchData = async () => {
-            const articlesRes = await axios.get('http://localhost:3000/api/opportunity');
+            const articlesRes = await axios.get('/api/opportunity');
             setOpportunities(articlesRes.data.data);
 
-            const eventsRes = await axios.get('http://localhost:3000/api/events');
+            const eventsRes = await axios.get('/api/events');
             setEvents(eventsRes.data.data);
 
 
-            const announcementsres = await axios.get('http://localhost:3000/api/announcements');
+            const announcementsres = await axios.get('/api/announcements');
                 setAnnouncements(announcementsres.data.data);
 
             if (!localStorage.getItem('X-auth-token')) return;
@@ -31,7 +31,7 @@ export const UserDataProvider = (props) => {
 
                 
                 // Make the API request
-                let response = await axios.get('http://localhost:3000/api/student/me', {
+                let response = await axios.get('/api/student/me', {
                     headers: {
                         'X-auth-token': localStorage.getItem('X-auth-token')
                     }
@@ -41,7 +41,7 @@ export const UserDataProvider = (props) => {
                 // console.log(response.data); 
                 if (response.data.success === false){
                     if (response.data.data.isTPO){
-                        response = await axios.get('http://localhost:3000/api/tpo/me', {
+                        response = await axios.get('/api/tpo/me', {
                     headers: {
                         'X-auth-token': localStorage.getItem('X-auth-token')
                     }

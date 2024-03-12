@@ -16,7 +16,7 @@ function InternshipForm({ onSubmit, onClose, closeModal }) {
     
     try {
       // Making Axios POST request to the API
-      const response = await axios.post("http://localhost:3000/api/opportunity", {
+      const response = await axios.post("https://vegahackathonbackend-9c856453c60a.herokuapp.com/api/opportunity", {
         jobTitle: title,
         company: company,
         place: location,

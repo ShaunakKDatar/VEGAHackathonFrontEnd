@@ -10,7 +10,7 @@ function EventForm({ onSubmit, onClose }) {
   const addEvent = async (title, description, startDate, endDate, token) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/events",
+        "https://vegahackathonbackend-9c856453c60a.herokuapp.com/api/events",
         {
           title: title,
           description: description,

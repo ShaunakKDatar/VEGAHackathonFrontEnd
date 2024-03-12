@@ -8,7 +8,7 @@ export default function Events() {
   const [showModal, setShowModal] = useState(false);
   const data = useContext(UserDataContext);
   const events = data.events;
-  console.log(events);
+
 
   
 
@@ -58,8 +58,8 @@ export default function Events() {
                 </tr>
               </thead>
               <tbody className="[&amp;_tr:last-child]:border-0">
-                {events.map((event) => {return <EventItem title={event.title} description={event.description}  />}
-                // {/* Add other rows similarly */}
+                {events.map((event) => {return <EventItem title={event.title} description={event.description} startDate={event.startDate}  endDate={event.endDate}/>})}
+                // {/* Add other rows similarly */} 
               </tbody>
             </table>
           </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 export default function RegisterStudent() {
   let [isTPO, setIsTPO] = useState(false);
@@ -14,7 +15,7 @@ export default function RegisterStudent() {
 
   const handleRegister = async () => {
     if (isTPO) {
-      console.log("TPO");
+      // console.log("TPO");
       try {
       const username = document.getElementById("username").value;
       const email = document.getElementById("email").value;
@@ -34,13 +35,13 @@ export default function RegisterStudent() {
       const token = response.data.token;
 
       // Do something with the response data and headers
-      console.log(responseData);
+      // console.log(responseData);
       if (responseData.success) {
         // Handle successful login/signup, e.g., redirect to dashboard
         localStorage.setItem('X-auth-token', token);
         // localStorage.setItem("test", 'soham')
         window.location.replace("/")
-        console.log(isLogin ? 'Login successful' : 'Signup successful');
+        // console.log(isLogin ? 'Login successful' : 'Signup successful');
       } else {
         // Handle login/signup failure, show error message to the user
         alert(data.error)
@@ -77,7 +78,6 @@ export default function RegisterStudent() {
         localStorage.setItem('X-auth-token', token);
         // localStorage.setItem("test", 'soham')
         window.location.replace("/")
-        console.log(isLogin ? 'Login successful' : 'Signup successful');
       } else {
         // Handle login/signup failure, show error message to the user
         alert(data.error)

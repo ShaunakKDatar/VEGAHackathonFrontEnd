@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InternshipForm from './InternshipForm';
+import InternshipForm from './InternshipForm.jsx';
 
 function InternshipTPO() {
   const [showModal, setShowModal] = useState(false);
@@ -46,11 +46,8 @@ function InternshipTPO() {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           {/* Modal */}
           <div className="bg-white p-4 rounded-lg shadow-md">
-            <button className="absolute top-2 right-2" onClick={closeModal}>
-              Close
-            </button>
             {/* Include the InternshipForm component inside the modal */}
-            <InternshipForm onSubmit={handleCreateInternship} onClose={closeModal} />
+            <InternshipForm onSubmit={handleCreateInternship} onClose={closeModal} closeModal={closeModal}/>
           </div>
         </div>
       )}

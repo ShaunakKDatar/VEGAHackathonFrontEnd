@@ -10,11 +10,15 @@ export const UserDataProvider = (props) => {
     const [userData, setUserData] = useState({});
     let [announcements, setAnnouncements] = useState([]);
     let [events, setEvents] = useState([]);
+    let [opportunities, setOpportunities] = useState([]);
 
     // Define the useEffect hook to make the API request
     useEffect(() => {
         const fetchData = async () => {
-            const eventsRes = await axios.get('http://localhost:3000/api/event');
+            const articlesRes = await axios.get('http://localhost:3000/api/opportunity');
+            setOpportunities(articlesRes.data.data);
+
+            const eventsRes = await axios.get('http://localhost:3000/api/events');
             setEvents(eventsRes.data.data);
 
 
@@ -34,7 +38,8 @@ export const UserDataProvider = (props) => {
                 });
 
                 // Save the response in userData
-                setUserData(response.data);
+                // console.log(response.data); 
+                setUserData(response.data.data);
             } catch (error) {
                 console.error(error);
             }
@@ -48,7 +53,7 @@ export const UserDataProvider = (props) => {
 
     // Return the provider component with the context value
     return (
-        <UserDataContext.Provider value={{ userData, announcements, events }}>
+        <UserDataContext.Provider value={{ userData, announcements, events, opportunities }}>
             {props.children}
         </UserDataContext.Provider>
     );

@@ -31,7 +31,7 @@ export const UserDataProvider = (props) => {
 
                 
                 // Make the API request
-                const response = await axios.get('http://localhost:3000/api/student/me', {
+                let response = await axios.get('http://localhost:3000/api/student/me', {
                     headers: {
                         'X-auth-token': localStorage.getItem('X-auth-token')
                     }
@@ -39,6 +39,14 @@ export const UserDataProvider = (props) => {
 
                 // Save the response in userData
                 // console.log(response.data); 
+                if (response.data.success === false){
+                    if (response.data.data.isTPO){
+                        response = await axios.get('http://localhost:3000/api/tpo/me', {
+                    headers: {
+                        'X-auth-token': localStorage.getItem('X-auth-token')
+                    }
+                });
+                }}
                 setUserData(response.data.data);
             } catch (error) {
                 console.error(error);

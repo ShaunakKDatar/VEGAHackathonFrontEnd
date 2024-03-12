@@ -9,7 +9,7 @@ import './Navbar.css'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const data = useContext(UserDataContext);
-  // console.log(data);
+  console.log(data);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

@@ -23,7 +23,7 @@ export default function Login() {
         password
       };
 
-      const response = await axios.post("http://localhost:3000/api/auth", userData);
+      const response = await axios.post("https://vegahackathonbackend-9c856453c60a.herokuapp.com/api/auth", userData);
       const responseData = response.data;
       const token = response.data.token;
 

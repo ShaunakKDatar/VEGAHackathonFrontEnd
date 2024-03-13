@@ -30,7 +30,7 @@ export default function RegisterStudent() {
         isTPO
       };
 
-      const response = await axios.post("http://localhost:3000/api/tpo", userData);
+      const response = await axios.post("https://vegahackathonbackend-9c856453c60a.herokuapp.com/api/tpo", userData);
       const responseData = response.data;
       const token = response.data.token;
 
@@ -67,7 +67,7 @@ export default function RegisterStudent() {
         isStudent
       };
 
-      const response = await axios.post("http://localhost:3000/api/student", userData);
+      const response = await axios.post("https://vegahackathonbackend-9c856453c60a.herokuapp.com/api/student", userData);
       const responseData = response.data;
       const token = response.data.token;
 
